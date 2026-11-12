@@ -1,0 +1,24 @@
+{
+  "name": "crawlscope-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Miniature search engine built from scratch",
+  "workspaces": [
+    "apps/*",
+    "services/crawler",
+    "services/indexer",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run --workspaces --if-present build",
+    "test": "npm run --workspaces --if-present test",
+    "clean": "npm run --workspaces --if-present clean"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
